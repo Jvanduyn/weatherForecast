@@ -13,21 +13,24 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <div class="search">
-        <h2>Search for a City:</h2>
-        <button class="searchBtn">Search</button>
-        <div id="searchContainer"></div>
-    </div>
-    <div class="search-container"></div>
-    <div class="main">
-        <div class="current-weather">
-
+    <main>
+        <div class="search">
+            <h2>Search for a City:</h2>
+            <input class="searchInput">
+            <button class="searchBtn">Search</button>
+            <div id="searchContainer"></div>
         </div>
-        <div class="5day">
-            <h3 class="5DayTitle">5-day forecast</h3>
-            <div id="5dayContainer"></div>
+        <div class="search-container"></div>
+        <div class="main">
+            <div class="current-weather"></div>
+            <div class="prev-cities"></div>
+            <div class="fiveDay">
+                <h3 class="fiveDayTitle">5-day forecast</h3>
+                <div id="fiveDayContainer"></div>
+            </div>
         </div>
-    </div>
+    </main>
+    <footer></footer>
     <script src="assets/script.js"></script>
 </body>
 

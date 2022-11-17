@@ -15,7 +15,16 @@ h1 {
     padding: 15px;
 }
 
+main {
+    display: flex;
+    margin-top: 20px;
+}
+
 .search {
     display: flex;
     flex-direction: column;
+}
+
+.fiveDay {
+    display: flex;
 }
