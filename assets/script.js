@@ -2,13 +2,22 @@ var input = document.querySelector('.searchInput');
 var searchBtn = document.querySelector('.searchBtn');
 var userLocation = document.querySelector('.searchInput').value;
 var prevCities = document.querySelector('.prev-cities');
-
+var currentWeatherContainer = document.querySelector('#current-weather');
+var listCurrentWeather = document.querySelector('#list');
 var citySearchHistory = []
 
+//function to take the user input to be able to put it in the get coord function to get the city coordinates
 function handleUserInput() {
+    var collection = document.querySelectorAll('li');
+    //for loope to remove previous li's that the current weather was listed in
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].remove();
+    }
     var city = input.value
     getCoord(city)
 }
+
+//function to get the city coordinates that the user inputs and store them in a var. 
 function getCoord(city) {
     var geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=b2888db4f0baa774a62c34dc4c426cad';
     fetch(geoUrl)
@@ -18,28 +27,40 @@ function getCoord(city) {
             var lat = data[0].lat;
             var lon = data[0].lon;
             var cityName = data[0].name
-            // console.log(data)
             saveHistory(cityName)
             getCurrentWeather(lat, lon);
-            getFutureWeather(lat, lon);
+            getFutureWeather(lat, lon)
         })
 }
 
+//function to get current weather data and display on the page
 function getCurrentWeather(lat, lon) {
     var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=b2888db4f0baa774a62c34dc4c426cad';
+
     fetch(requestUrl)
         .then(function (response) {
             return response.json();
         }).then(function (data) {
+            var currentTemp = Math.floor(data.main.temp);
+            var cityName = data.name;
+            var wind = Math.floor(data.wind.speed);
+            var humidity = data.main.humidity;
 
-            console.log(data)
-            //need to obtain name of city, current weather, wind, and humidity and display it on page
-            //create all the elements to display on page
-            //add content to those elements
-            //need to append that content to the elements they need to go into
+            cityInfo = [cityName, currentTemp, wind, humidity];
+            cityInfoNames = ['City: ', 'Current temperature: ', 'Wind speed: ', 'Humidity percentage: ']
+            cityInfoAfter = ['', ' °F', ' mph', '%'];
+
+            for (let index = 0; index < cityInfo.length; index++) {
+                var li = document.createElement('li');
+                li.textContent = cityInfoNames[index] + cityInfo[index] + cityInfoAfter[index];
+                li.setAttribute('class', 'list-group-item');
+                li.setAttribute('id', 'li');
+                listCurrentWeather.appendChild(li);
+            }
         })
 }
 
+//getting 5 day weather forecast and displaying it on the page
 function getFutureWeather(lat, lon) {
     var requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=b2888db4f0baa774a62c34dc4c426cad';
     fetch(requestUrl)
@@ -66,12 +87,7 @@ function saveHistory(city) {
     localStorage.setItem('searchHistory', JSON.stringify(citySearchHistory))
 }
 
-
 searchBtn.addEventListener('click', handleUserInput);
-
-
-
-//take the data and display it to the page
 
 
 //store local storage a list of cities that user has searched
