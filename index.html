@@ -14,8 +14,8 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <main>
-        <div class="search">
+    <main class="row">
+        <div class="search col-3">
             <h2>Search for a City:</h2>
             <input class="searchInput">
             <button class="searchBtn btn btn-primary btn-lg btn-block">Search</button>
@@ -23,17 +23,17 @@
             <hr />
             <div class="prev-cities"></div>
         </div>
-        <div class="search-container"></div>
-        <div class="main">
+        <!-- <div class="search-container"></div> -->
+        <div class="main col-9">
             <div id="current-weather">
                 <h2>Current Weather:</h2>
                 <ul id="list">
-                    <li id="li"></li>
+
                 </ul>
             </div>
-            <div class="fiveDay row">
+            <div class="fiveDay">
                 <h2 class="fiveDayTitle">5-day forecast</h2>
-                <div id="fiveDayContainer"></div>
+                <div id="fiveDayContainer" class="row"></div>
             </div>
         </div>
     </main>
