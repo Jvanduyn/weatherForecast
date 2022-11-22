@@ -136,11 +136,13 @@ function createButton(city) {
     var createBtn = document.createElement('button')
     createBtn.textContent = city;
     prevCities.append(createBtn)
+    // createButton.setAttribute("onclick", "buttonClick(city)");
 }
 
-function buttonClick(city) {
-    createButton.setAttribute("on")
-}
-createButton.setAttribute("onclick", "createButton(city)");
+// var buttonClick = function (city) {
+//     getCoord(city)
+// }
+
+
 
 searchBtn.addEventListener('click', handleUserInput);

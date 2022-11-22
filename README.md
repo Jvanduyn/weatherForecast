@@ -1,102 +1,41 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Weather Forecast App  
 
-## Your Task
+## Description
 
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+During this project, I wanted to be able to use 3rd party API's in order to have a user check the weather. This web app will allow users to look up the current weather for any city they type out, as well as the 5 day forecast. They will then be able to store whatever city they type in order to look at the weather for that city later.   
 
-Use the [5 Day Weather Forecast](https://openweathermap.org/forecast5) to retrieve weather data for cities. The base URL should look like the following: `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`. After registering for a new API key, you may need to wait up to 2 hours for that API key to activate.
+- My motivation for this project was to be able to put some of my Javascript skills into on larger scale project. I wanted to be able to make a practical website that someone could use to check the weather. 
+- I built this project because I wanted to be able to use API's for a functional website.
+- During this project I learned how to be able to impliment 3rd party api's into a functional website and use common Javascript for the user to use a responsive page. 
 
-**Hint**: Using the 5 Day Weather Forecast API, you'll notice that you will need to pass in coordinates instead of just a city name. Using the OpenWeatherMap APIs, how could we retrieve geographical coordinates given a city name?
+## Installation
 
-You will use `localStorage` to store any persistent data. For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
+- In order to see the website live, you can follow this link. https://jvanduyn.github.io/weatherForecast/
 
-## User Story
+- If you wish to view the code, please visit my Github repository. https://github.com/Jvanduyn/weatherForecast
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
+- If you wish to install the code, you must click on the large green button that displays "Code". From there you will copy this link under the SSH key (git@github.com:Jvanduyn/weatherForecast.git).
 
-## Acceptance Criteria
+- You will then need to open your operating systems terminal and type "git clone git@github.com:Jvanduyn/weatherForecast.git". From there you will need to type "cd weatherForecast". Lastly you will need to type the phrase "code .". You now have access to the repository! Below is a screen shot of the repository as well as the live website. 
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-```
+## Usage
 
-## Mock-Up
+![alt text](/assets/demo.png)
+![alt text](/assets/github.png)
 
-The following image shows the web application's appearance and functionality:
+## Credits
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./Assets/06-server-side-apis-homework-demo.png)
+During this project, I collaborated with two people I would like to thank. 
 
-## Grading Requirements
+First I collaborated with my fellow classmate Alexander. He and I were able to get most of the project working together minus a few issues with the local storage. I would also like to thank a classmate tyler who was able to help me understand how to pull the stored information and display it on the page for the local storage. 
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+Lastly I was able to work with a tutor of mine Vinnie Lopez. He was able to really help me polish the project off by getting the code working perfectly, and being able to consolidate most of the code to make it functioning properly.
 
-This Challenge is graded based on the following criteria: 
+## Features
 
-### Technical Acceptance Criteria: 40%
+This project allows a user to find the weather for any city of their choosing. They will be able to see the current weather and weather for the next 5 days. it will then allow them to be able to store their city to local storage to call that city again. 
 
-* Satisfies all of the above acceptance criteria plus the following:
-
-    * Uses the OpenWeather API to retrieve weather data.
-
-    * Uses `localStorage` to store persistent data.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Contact
+If you wish to contact me, you can reach me at both my email and my github site. 
+- jcvanduyn@yahoo.com
+- https://github.com/Jvanduyn
